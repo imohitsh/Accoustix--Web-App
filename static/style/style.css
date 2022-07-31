@@ -1,0 +1,136 @@
+* {
+  font-family: "Dongle", sans-serif;
+}
+
+/* background: linear-gradient(90deg, #e39ff6 0%, #e39ff6 100%); */
+.home-bg {
+  background: linear-gradient(180deg, #e39ff6 0%, #e77198 50%);
+}
+
+.home-bg2 {
+  background: linear-gradient(90deg, #e39ff6 0%, #e77198 50%);
+}
+
+.home-h2 {
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.home-h5 {
+  font-family: cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+.align-image {
+  margin-top: 4rem;
+  margin-left: 0.05rem;
+  width: 500px;
+  height: 500px;
+}
+
+.navbar {
+  background: linear-gradient(100deg, #e39ff6 0%, #e77198 50%);
+  margin-bottom: 30px;
+}
+
+.register-img {
+  margin-top: 4rem;
+}
+
+.register-text-color {
+  color: #71777d;
+}
+
+/* About Us */
+.about-img {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.social-link {
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c2968;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: rgb(31, 29, 29);
+}
+
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Chat Window */
+.navbar {
+  background-color: #e39ff6;
+  margin-bottom: 30px;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.welcome-header {
+  margin-top: 40vh;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+.chat-message-left,
+.chat-message-right {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.chat-message-left {
+  margin-right: auto;
+}
+
+.chat-message-right {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+#display-message-section {
+  margin-top: 5em;
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow-y: auto; /*Make  this section scrolable */
+}

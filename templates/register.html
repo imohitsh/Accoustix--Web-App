@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register
+{% endblock title %}
+
+{% block body %}
+
+{% if user_exists %}
+<div class="mt-5 alert alert-warning text-danger text-center">
+    This email is already registered with us. Try <a href="{{url_for('login')}}">Logging In</a>
+</div>
+{% endif %}
+
+<section class="h-100 bg-white">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="register-img col-md-6 mx-auto d-xl-block">
+                            <img src="{{ url_for('static' ,filename='images/registration-logo.svg')}}"
+                                alt="Registration" class="img-fluid align-image"
+                                style="border-top-left-radius: .25rem;
+                   border-bottom-left-radius: .25rem; border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase text-center ">Signup 🤝 </h3>
+                                <h6 class=" text-muted mb-5"> Create your account.It is free and takes a minute
+                                    only!</h6>
+
+                                <!-- Form Starts -->
+                                <form action="/register" method="post">
+                                    <div class="row">
+                                        <div class="col-sm-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="first-name" name="first-name"
+                                                    placeholder="First-Name" class="form-control form-control-md"
+                                                    required />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="last-name" name="last-name"
+                                                    placeholder="Last-Name" class="form-control form-control-md"
+                                                    required />
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="email" name="email" placeholder="Email-Address"
+                                            class="form-control form-control-md" required />
+
+                                    </div>
+
+                                    <div
+                                        class="d-md-flex justify-content-start align-items-center mb-4 py-2 register-text-color">
+
+                                        <h6 class="mb-0 me-4">Gender: </h6>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" id="femaleGender" name="gender"
+                                                value="female" />
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" id="maleGender" name="gender"
+                                                value="male" />
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0">
+                                            <input class="form-check-input" type="radio" id="otherGender" name="gender"
+                                                value="other" checked />
+                                            <label class="form-check-label" for="otherGender">Other</label>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="form-outline datepicker md-6 mb-4 register-text-color">
+                                        <label class="form-outline" for="form3Example90">DOB</label>
+                                        <input type="date" placeholder="DOB" class="form-control register-text-color"
+                                            id="user-dob" name="user-dob" required />
+
+                                    </div>
+
+
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="username" name="username" placeholder="Username"
+                                            class="form-control form-control-md" required />
+
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="password" name="password" placeholder="Password"
+                                            class="form-control form-control-md" onkeyup="check();" required />
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="confirm-password" name="confirm-password"
+                                            placeholder="Confirm Password" class="form-control form-control-md"
+                                            onkeyup="check();" required />
+                                        <span id="message"></span>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end pt-3">
+                                        <button type="reset" class="btn btn-danger btn-sm">Clear</button>
+                                        <button type="submit" class="btn btn-success btn-sm ms-2">Create
+                                            account</button>
+                                    </div>
+                                    <div class=" text-muted mb-5"> Already a member?</h6>
+                                        <a href="{{url_for('login')}}"><button type="button"
+                                                class="btn btn-outline-primary text-dark btn-md">LogIn</button></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

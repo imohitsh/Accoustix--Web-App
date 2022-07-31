@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    LogIn
+{% endblock title %}
+
+{% block body %}
+    
+{% if wrong_credentials %}
+
+<div class="mt-5 alert alert-warning text-danger text-center">
+    Incorrect Credentials, please try again!
+</div>
+
+{% endif %}
+<!--body-->
+<section class="h-100 bg-white">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-login my-4">
+                    <div class="row g-0">
+                        <div class="login-img col-md-6 mx-auto d-xl-block">
+                            <img src="{{ url_for('static' ,filename='images/login-logo.png')}}" alt="Login"
+                                class="img-fluid align-image"
+                                style="border-top-left-radius: .25rem;
+                   border-bottom-left-radius: .25rem; border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase text-center ">Login 🤝 </h3>
+                                <h6 class="text-muted text-center mb-5"> Welcome Back!</h6>
+
+                                <!-- Form Starts -->
+                                <form action="/login" method="post">
+                                    <div class="row">
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="email" name="email" placeholder="Email"
+                                                class="form-control form-control-md" required />
+
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="password" name="password" placeholder="Password"
+                                                class="form-control form-control-md" required />
+
+                                        </div>
+                                        <div class="d-flex justify-content-end pt-9">
+                                            <button type="submit" class="btn btn-success btn-sm">LogIn</button>
+
+                                        </div>
+
+                                        <br>
+
+                                        <div class=" text-muted mb-5"> Don't have an account?</h6>
+                                            <a href="{{url_for('register')}}"><button type="button"
+                                                    class="btn text-dark btn-outline-warning btn-md"> Register
+                                                    Here</button></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

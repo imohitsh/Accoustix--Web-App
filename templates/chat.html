@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static' ,filename='style/style.css')}}" />
+    <link rel="shortcut icon" href="{{ url_for('static' , filename='images/shortcut-icon.svg')}}" />
+    <title>
+        Messaging
+    </title>
+</head>
+
+<body>
+    <nav class="navbar md-0">
+        <a class="navbar-brand" href="{{url_for('home')}}">
+            <img src="{{ url_for('static' ,filename='images/Accoustix-logo-mini.png')}}" alt="Home Page"
+                style="width:6rem;" class="rounded-pill mx-5">
+        </a>
+        <ul class="nav justify-content-start mx-5">
+
+            <li class="nav-item mt-2 ">
+                <a class="nav-link" href="#">
+                    <p class="btn btn-dark btn-sm " style="color:#e39ff6">My Profile <i class="fas fa-user mx-2"></i>
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="nav-link" href="#">
+                    <p class="btn btn-dark btn-sm" style="color:#e39ff6">Log out <i
+                            class="fas fa-sign-out-alt mx-2"></i></p>
+                </a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="container p-0">
+
+            <h1 class="h3 mb-3">Messages</h1>
+
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-5 col-xl-3 border-right">
+
+                        <div class="px-4 d-md-block">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <input type="text" class="form-control my-3" placeholder="Search...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+
+                            <div class="d-flex align-items-start">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar5.png"
+                                    class="rounded-circle mr-1" alt="Vanessa Tucker" width="40" height="40">
+                                <div class="flex-grow-1 mx-2">
+                                    Vanessa Tucker
+
+                                </div>
+                            </div>
+                        </a>
+
+                        <hr class="d-block d-lg-none mt-1 mb-0">
+                    </div>
+                    <div class="col-12 col-lg-7 col-xl-9">
+                        <div class="py-2 px-4 mt-auto">
+                            <div class=" d-flex align-items-center py-1 mx-5">
+                                <p class="mx-5 h4 text-center welcome-header"> WELCOME <br>
+                                    <span class=" h5 text-muted mx-auto">Click on any user and start your secure
+                                        chat.💻</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/socketio.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+        integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+        crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!-- <div id="main-section">
+    <nav id="sidebar">
+
+
+    </nav>
+    <div class="rightside-pannel">
+        <div id="display-message-section">
+
+        </div>
+
+        <div id="input-area">
+            <input type="text" name="" id="user-message" placeholder="Type Here..." autocomplete="off">
+            <button type="button" id="send-message">Send</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    const username = `{{username}}`;
+</script>
+
+<script src="{{ url_for('static', filename='js/socketio.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+    integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+    crossorigin="anonymous"></script> -->
